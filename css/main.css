@@ -1,0 +1,247 @@
+/*:root {
+
+}*/
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    all: unset;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0 auto;
+    font-family: 'Oswald', sans-serif;
+}
+
+.tel{
+	position: fixed;
+	color: white;
+	background-color: #333;
+	width: 42px;
+	height: 42px;
+	top: 20%;
+	text-align: right;
+	z-index: 999;
+	transition: 0.4s;
+	border-radius: 2px;
+	font-size: 20px;
+	box-shadow: 0.5px 0.5px 2px black;
+}
+.tel:hover{
+	width: 100px;
+	cursor: pointer;
+}
+.tel img{
+	width: 41px;
+	height: 41px;
+}
+.header {
+    height: 100vh;
+    width: 100%;
+    background: url(https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.header #nav {
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    color: white;
+    transition: all 0.5s ease 0s;
+}
+
+.header #nav .logo {
+    font-size: 1.5em;
+    position: absolute;
+    left: 10px;
+    cursor: pointer;
+}
+
+.header #nav .nav-menu {
+    position: absolute;
+    right: 10px;
+}
+
+.header #nav .nav-menu .nav-menu-item {
+    display: inline-block;
+    margin: 0 10px 0 10px;
+    cursor: pointer;
+}
+
+.header #nav .nav-menu .nav-menu-item:hover {
+    border-bottom: 1px solid;
+    margin-bottom: -1px;
+}
+
+.header #nav #h-menu {
+    position: absolute;
+    right: 10px;
+    display: none;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.header #nav #h-menu div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+.header .flex-overlay {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.header .flex-overlay h1 {
+    font-weight: normal;
+    text-align: center;
+	font-size: 80px;
+	animation-name: logo;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+}
+
+.header #h-menu-shadow {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background: #00000080;
+    top: 0;
+    display: none;
+}
+
+.header #h-menu-shadow ul {
+    list-style-type: none;
+    margin-top: 70px;
+    line-height: 40px;
+    font-size: 1.2em;
+    color: grey;
+}
+
+.header #h-menu-shadow ul li:hover {
+    color: #333;
+    cursor: pointer;
+}
+
+.header #h-menu-shadow #side-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: white;
+    height: 100%;
+    width: 250px;
+    transform: translateX(250px);
+    transition: 0.5s ease;
+}
+
+.header #h-menu-shadow #close {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.header #h-menu-shadow #close:hover {
+    opacity: 1;
+}
+
+.header #h-menu-shadow #close:before, .header #h-menu-shadow #close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+}
+
+.header #h-menu-shadow #close:before {
+    transform: rotate(45deg);
+}
+
+.header #h-menu-shadow #close:after {
+    transform: rotate(-45deg);
+}
+
+.main {
+    width: 100%;
+    max-width: 1024px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.main #d-hr-el1 {
+    width: 40px;
+    height: 2px;
+    background: black;
+    margin: 0 auto;
+}
+
+.main #d-hr-el2 {
+    width: 20px;
+    height: 2px;
+    background: black;
+    margin: 0 auto;
+    margin-top: 2px;
+}
+
+.main #pizza-menu {
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    overflow: auto;
+}
+
+.main #pizza-menu td {
+    padding: 5px;
+}
+
+.main #pizza-menu tr:nth-child(even){
+    background: #efefef;
+} 
+
+
+.main #pizza-menu #desc {
+    display: block;
+    padding-left: 10px;
+    font-size: 0.7em;
+    color: grey;
+}
+
+.main #map {
+    margin: 20px 0px 20px 0px;
+}
+
+.footer {
+    width: 100%;
+    height: 40px;
+    background: #efefef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+@keyframes logo{
+  0%{ transform: scale(1.05);}
+  25%{transform: scale(0.99);}
+  50%{transform: scale(1.05);}
+  75%{transform: scale(0.99);}
+  100%{transform: scale(1.05);}
+}
